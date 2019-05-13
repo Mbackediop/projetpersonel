@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Insertion de la lampe</title>
+</head>
+
+<body>
+
+    <button id="btn" onclick="lampe()">LIGHT</button>
+
+    <img id="switch" src="off.png" width="100px">
+
+
+
+    <script>
+        function lampe() {
+
+
+            var image = document.getElementById('switch');
+
+            if (image.src.match('off.png')) {
+                document.getElementById('btn').textContent = 'off'
+
+                image.src = 'on.png';
+            } else {
+                document.getElementById('btn').textContent = 'on'
+
+                image.src = 'off.png';
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
